@@ -1,4 +1,4 @@
-namespace Patzilla;
+namespace QuickGame;
 
 public static class ModHelperData
 {
