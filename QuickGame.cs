@@ -29,17 +29,22 @@ public class QuickGame : BloonsTD6Mod
     {
         if (GameStart)
         {
-            var mode = Difficulty.GetValue().ToString();
-            if (mode == "Chimps")
-            {
-                mode = "Clicks";
-            }
-            InGameData.Editable.selectedMode = mode;
-            InGameData.Editable.selectedMap = "Tutorial";
-            InGameData.Editable.selectedDifficulty = Difficulty.GetValue().ToString();
-            UI.instance.LoadGame();
-            GameStart = false;
+            LoadGame();
         }
+    }
+
+    public void LoadGame()
+    {
+        var mode = Mode.GetValue().ToString();
+        if (mode == "Chimps")
+        {
+            mode = "Clicks";
+        }
+        InGameData.Editable.selectedMode = mode;
+        InGameData.Editable.selectedMap = "Tutorial";
+        InGameData.Editable.selectedDifficulty = Difficulty.GetValue().ToString();
+        UI.instance.LoadGame();
+        GameStart = false;
     }
 
     public override void OnTitleScreen()
