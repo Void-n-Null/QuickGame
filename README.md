@@ -7,6 +7,10 @@
 
 <h2>Modding Utility:</h2>
 
-<h3>Loads into game immediately after Title Screen. No more clicking into sandbox mode over and over.</h2>
+<h3>Loads into game immediately after Title Screen. No more clicking into sandbox mode over and over.</h3>
+
+<h3>Change Game Mode and Difficulty in Mod Settings.</h3>
+
+
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
