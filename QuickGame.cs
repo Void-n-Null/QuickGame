@@ -16,10 +16,10 @@ namespace QuickGame;
 public class QuickGame : BloonsTD6Mod
 {
     public bool GameStart = true;
-/*    public enum diff {Easy,Medium,Hard}
-    public enum mode {Sandbox,Standard,MagicOnly,Impoppable,Chimps,HalfCash}
+    public enum diff { Easy, Medium, Hard }
+    public enum mode { Sandbox, Standard, MagicOnly, Impoppable, Chimps, HalfCash }
     public ModSettingEnum<diff> Difficulty = new ModSettingEnum<diff>(diff.Easy);
-    public ModSettingEnum<mode> Mode = new ModSettingEnum<mode>(mode.Sandbox);*/
+    public ModSettingEnum<mode> Mode = new ModSettingEnum<mode>(mode.Sandbox);
     public override void OnApplicationStart()
     {
 
@@ -29,14 +29,14 @@ public class QuickGame : BloonsTD6Mod
     {
         if (GameStart)
         {
-/*            var mode = Difficulty.GetValue().ToString();
+            var mode = Difficulty.GetValue().ToString();
             if (mode == "Chimps")
             {
                 mode = "Clicks";
-            }*/
-            InGameData.Editable.selectedMode = "Sandbox";
+            }
+            InGameData.Editable.selectedMode = mode;
             InGameData.Editable.selectedMap = "Tutorial";
-            InGameData.Editable.selectedDifficulty = "Easy";
+            InGameData.Editable.selectedDifficulty = Difficulty.GetValue().ToString();
             UI.instance.LoadGame();
             GameStart = false;
         }
